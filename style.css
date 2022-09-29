@@ -1,0 +1,108 @@
+h3{
+    margin:0;
+    padding:0;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .frame{
+    margin-top: 3rem;
+  }
+  
+  .floor-container{
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end
+  }
+  
+  .btn-box{
+    height: 100px;
+    width: 5rem;
+  }
+  
+  .cal-btn{
+    border: none;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0.2rem;
+    background-color: #256D85;
+    color: #DFF6FF;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .lift-grp{
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 2rem;
+  }
+  
+  .floor{
+    height: 100px;
+    border-bottom: 1px solid black;
+  }
+  
+  .lift {
+    width: 5rem;
+    height: 5rem;
+    background-color: black;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .lift::before {
+    content: '';
+    display: block;
+    position: absolute;
+    block-size: 100%;
+    inset-inline-start: 0.5px;
+    inline-size: 49%;
+    background-color: #256D85;
+  }
+  
+  .lift::after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset-inline-end: 0.5px;
+    block-size: 100%;
+    inline-size: 48%;
+    background-color: #256D85;
+  }
+  .operation-door::before {
+    animation: left-door 5000ms ease;
+  }
+  
+  .operation-door::after {
+    animation: right-door 5000ms ease;
+  }
+  
+  @keyframes left-door {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes right-door {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
